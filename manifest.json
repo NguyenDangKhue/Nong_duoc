@@ -1,0 +1,10 @@
+{
+  "name": "Sổ pha thuốc BVTV",
+  "short_name": "Pha thuốc",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f3f4ef",
+  "theme_color": "#0f2419",
+  "lang": "vi",
+  "description": "Tra dạng nông dược, thứ tự pha và thuốc không phối chung."
+}
