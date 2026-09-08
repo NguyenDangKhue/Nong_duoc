@@ -142,7 +142,7 @@
             <li><strong>Vi sinh</strong> (Dipel Bt, Acti No Vate, Trichoderma) với thuốc nấm hóa học, kháng sinh, vôi. Cách ly 5–7 ngày.</li>
             <li><strong>Carbamate kim loại</strong> (mancozeb, zineb, propineb, fosetyl-Al) với kháng sinh (kasugamycin, validamycin…).</li>
             <li><strong>Canxi / magie</strong> với gốc sunfat hoặc lân — kết tủa, nghẹt béc.</li>
-            <li><strong>Cùng nhóm IRAC hoặc FRAC</strong> — không mở phổ, tăng kháng thuốc (Prevathon + Benevia; Mospilan + Jono + Thiamax; Insuran + Phytocide + Eddy).</li>
+            <li><strong>Cùng nhóm IRAC hoặc FRAC</strong> — không mở phổ, tăng kháng thuốc (Prevathon 5SC / 200SC + Benevia; Mospilan + Jono / Mikhada / Anvado + Thiamax / Actara + Dantotsu; Insuran + Phytocide + Eddy + Cylen; Permethrin + Icon + Sec Saigon + NP-Cyrin).</li>
           </ul>
         </div>
 
@@ -168,12 +168,26 @@
 
       <section id="page-checker" class="page">
         <h2 style="font-size:1.05rem;margin:0 0 6px">Bộ tra pha</h2>
-        <p class="muted">Chọn thuốc đang cầm. Web sắp thứ tự theo dạng chế phẩm và báo cặp kỵ.</p>
-        <div class="tank-bar">
-          <button data-l="8">8L</button>
-          <button class="on" data-l="16">16L</button>
-          <button data-l="20">20L</button>
-          <button data-l="25">25L</button>
+        <p class="muted">Chọn cây đang phun, nhập số lít bình pha, rồi chọn thuốc. Thuốc cấm trên cây đó bị làm mờ, không chọn được.</p>
+        <div class="crop-bar">
+          <label for="crop-select">Cây đang phun</label>
+          <select id="crop-select"></select>
+          <p id="crop-ban-hint" class="muted"></p>
+        </div>
+        <div class="tank-card">
+          <label for="tank-liters">Số lít cần pha</label>
+          <p class="muted" id="tank-hint">Liều nhãn tính theo bình 16 lít. Nhập đúng số lít nước sẽ pha — hệ thống quy ra lượng thuốc phải lấy cho bình đó.</p>
+          <div class="tank-bar">
+            <button type="button" data-l="8">8L</button>
+            <button type="button" class="on" data-l="16">16L</button>
+            <button type="button" data-l="20">20L</button>
+            <button type="button" data-l="25">25L</button>
+          </div>
+          <div class="tank-custom">
+            <input id="tank-liters" type="number" min="0.5" max="500" step="0.5" value="16" inputmode="decimal" enterkeyhint="done">
+            <span class="tank-unit">lít</span>
+          </div>
+          <p id="tank-scale-hint" class="muted"></p>
         </div>
         <div id="checker-picks" class="prod-list" style="margin-bottom:14px"></div>
         <div id="checker-result"></div>
