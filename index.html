@@ -10,17 +10,25 @@
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect fill='%231f6b45' width='64' height='64' rx='14'/%3E%3Cpath fill='%23fff' d='M18 40c8-16 20-22 28-24-6 8-8 18-6 28-10-2-18-2-22-4z'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;700;800&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <div class="app">
     <header class="topbar">
-      <h1>Sổ pha thuốc BVTV</h1>
-      <p>Dạng chế phẩm · thứ tự pha · cặp kỵ nhau</p>
+      <div class="top-head">
+        <div>
+          <h1 data-i18n="title">Sổ pha thuốc BVTV</h1>
+          <p data-i18n="subtitle">Dạng chế phẩm · thứ tự pha · cặp kỵ nhau</p>
+        </div>
+        <div class="lang-switch" role="group" aria-label="Ngôn ngữ / 言語">
+          <button type="button" data-set-lang="vi" class="on" aria-pressed="true">VI</button>
+          <button type="button" data-set-lang="ja" aria-pressed="false">日本語</button>
+        </div>
+      </div>
       <div class="search-wrap">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c5d5c9" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
-        <input id="global-search" type="search" placeholder="Tìm WP, EC, Dipel, rầy, sương mai…" autocomplete="off">
+        <input id="global-search" type="search" data-i18n-placeholder="searchPh" placeholder="Tìm WP, EC, Dipel, rầy, sương mai…" autocomplete="off">
       </div>
     </header>
 
@@ -30,32 +38,32 @@
       <section id="page-home" class="page">
         <div class="hero-actions">
           <button class="big-btn primary" data-go="#/tra">
-            <strong>Tra pha ngay</strong>
-            <span>Chọn thuốc → thứ tự + cảnh báo</span>
+            <strong data-i18n="homeTra">Tra pha ngay</strong>
+            <span data-i18n="homeTraSub">Chọn thuốc → thứ tự + cảnh báo</span>
           </button>
           <button class="big-btn secondary" data-go="#/pha">
-            <strong>Thứ tự pha</strong>
-            <span>WP → WG → SC → OD → EC</span>
+            <strong data-i18n="homeMix">Thứ tự pha</strong>
+            <span data-i18n="homeMixSub">WP → WG → SC → OD → EC</span>
           </button>
         </div>
         <div class="section-title">
-          <h2>Dạng chế phẩm hay gặp</h2>
-          <a href="#/dang">Tất cả</a>
+          <h2 data-i18n="homeForms">Dạng chế phẩm hay gặp</h2>
+          <a href="#/dang" data-i18n="homeAll">Tất cả</a>
         </div>
         <div id="home-forms" class="form-grid"></div>
         <div class="section-title" style="margin-top:18px">
-          <h2>Thuốc hay dùng</h2>
-          <a href="#/thuoc">Danh sách</a>
+          <h2 data-i18n="homeProds">Thuốc hay dùng</h2>
+          <a href="#/thuoc" data-i18n="homeList">Danh sách</a>
         </div>
         <div id="home-prods" class="prod-list"></div>
-        <p class="note-legal"><a href="#/nguon">Nguồn thông tin</a> · Không thay thế nhãn đăng ký Bộ NN&MT.</p>
+        <p class="note-legal"><a href="#/nguon" data-i18n="homeLegalLink">Nguồn thông tin</a> · <span data-i18n="homeLegalRest">Không thay thế nhãn đăng ký Bộ NN&MT.</span></p>
       </section>
 
       <section id="page-forms" class="page">
-        <div class="section-title"><h2>Pha với nước để phun</h2></div>
-        <p class="muted">Chữ cuối tên thuốc (WP, WG, EC…) là dạng bào chế — quyết định thuốc vào bình ở bước nào. Bấm để xem cách pha.</p>
+        <div class="section-title"><h2 data-i18n="formsSprayTitle">Pha với nước để phun</h2></div>
+        <p class="muted" data-i18n="formsIntro">Chữ cuối tên thuốc (WP, WG, EC…) là dạng bào chế — quyết định thuốc vào bình ở bước nào. Bấm để xem cách pha.</p>
         <div id="forms-spray" class="form-grid" style="margin-top:10px"></div>
-        <div class="section-title" style="margin-top:18px"><h2>Không pha bình phun lá</h2></div>
+        <div class="section-title" style="margin-top:18px"><h2 data-i18n="formsOtherTitle">Không pha bình phun lá</h2></div>
         <div id="forms-other" class="form-grid"></div>
       </section>
 
@@ -64,32 +72,32 @@
       </section>
 
       <section id="page-mix" class="page">
-        <h2 style="font-size:1.05rem;margin:0 0 8px">Thứ tự cho thuốc vào bình</h2>
-        <p class="muted">Nguyên tắc: nước trước — rắn khó tan trước — lỏng sau — dầu/nhũ gần cuối — phân bón lá và bám dính cuối cùng. Khuấy đều sau mỗi loại.</p>
+        <h2 style="font-size:1.05rem;margin:0 0 8px" data-i18n="mixH2">Thứ tự cho thuốc vào bình</h2>
+        <p class="muted" data-i18n="mixIntro">Nguyên tắc: nước trước — rắn khó tan trước — lỏng sau — dầu/nhũ gần cuối — phân bón lá và bám dính cuối cùng. Khuấy đều sau mỗi loại.</p>
         <div class="legend">
-          <span><i class="dot" style="background:#dcfce7"></i> Phối được</span>
-          <span><i class="dot" style="background:#fde68a"></i> Có điều kiện</span>
-          <span><i class="dot" style="background:#fecaca"></i> Không phối</span>
+          <span><i class="dot" style="background:#dcfce7"></i> <span data-i18n="legendOk">Phối được</span></span>
+          <span><i class="dot" style="background:#fde68a"></i> <span data-i18n="legendMid">Có điều kiện</span></span>
+          <span><i class="dot" style="background:#fecaca"></i> <span data-i18n="legendNo">Không phối</span></span>
         </div>
         <ol id="mix-steps" class="step-list"></ol>
 
         <div class="card">
-          <h3>Bảng nhóm hoạt chất</h3>
+          <h3 data-i18n="matrixTitle">Bảng nhóm hoạt chất</h3>
           <div class="matrix">
             <table>
               <thead>
                 <tr>
-                  <th class="left">Nhóm</th>
-                  <th>Trừ sâu</th>
-                  <th>Trừ bệnh</th>
-                  <th>Trừ cỏ</th>
-                  <th>Sinh học</th>
-                  <th>Phân lá</th>
+                  <th class="left" data-i18n="thGroup">Nhóm</th>
+                  <th data-i18n="thInsect">Trừ sâu</th>
+                  <th data-i18n="thDisease">Trừ bệnh</th>
+                  <th data-i18n="thWeed">Trừ cỏ</th>
+                  <th data-i18n="thBio">Sinh học</th>
+                  <th data-i18n="thFert">Phân lá</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th class="left">Trừ sâu, rầy</th>
+                  <th class="left" data-i18n="rowInsect">Trừ sâu, rầy</th>
                   <td class="cell-mid">⚠</td>
                   <td class="cell-ok">✔</td>
                   <td class="cell-no">✖</td>
@@ -97,7 +105,7 @@
                   <td class="cell-mid">⚠</td>
                 </tr>
                 <tr>
-                  <th class="left">Trừ bệnh</th>
+                  <th class="left" data-i18n="rowDisease">Trừ bệnh</th>
                   <td class="cell-ok">✔</td>
                   <td class="cell-mid">⚠</td>
                   <td class="cell-no">✖</td>
@@ -105,7 +113,7 @@
                   <td class="cell-mid">⚠</td>
                 </tr>
                 <tr>
-                  <th class="left">Trừ cỏ</th>
+                  <th class="left" data-i18n="rowWeed">Trừ cỏ</th>
                   <td class="cell-no">✖</td>
                   <td class="cell-no">✖</td>
                   <td class="cell-mid">⚠</td>
@@ -113,7 +121,7 @@
                   <td class="cell-no">✖</td>
                 </tr>
                 <tr>
-                  <th class="left">Sinh học (Bt, Streptomyces)</th>
+                  <th class="left" data-i18n="rowBio">Sinh học (Bt, Streptomyces)</th>
                   <td class="cell-mid">⚠</td>
                   <td class="cell-no">✖</td>
                   <td class="cell-no">✖</td>
@@ -121,7 +129,7 @@
                   <td class="cell-mid">⚠</td>
                 </tr>
                 <tr>
-                  <th class="left">Phân bón lá</th>
+                  <th class="left" data-i18n="rowFert">Phân bón lá</th>
                   <td class="cell-mid">⚠</td>
                   <td class="cell-mid">⚠</td>
                   <td class="cell-no">✖</td>
@@ -131,33 +139,33 @@
               </tbody>
             </table>
           </div>
-          <p class="muted" style="margin-top:8px">✔ phối được (đúng thứ tự, thử cốc) · ⚠ được khi liều thấp / không trùng nhóm IRAC–FRAC · ✖ phun riêng</p>
+          <p class="muted" style="margin-top:8px" data-i18n="matrixNote">✔ phối được (đúng thứ tự, thử cốc) · ⚠ được khi liều thấp / không trùng nhóm IRAC–FRAC · ✖ phun riêng</p>
         </div>
 
         <div class="card">
-          <h3>Cặp không trộn chung</h3>
-          <ul class="plain">
+          <h3 data-i18n="banTitle">Cặp không trộn chung</h3>
+          <ul class="plain" data-i18n-html="banList">
             <li><strong>Thuốc trừ cỏ</strong> với mọi thứ khác. Rửa bình thật kỹ.</li>
             <li><strong>COC 85, CuSO4, Booc-đô</strong> — phun riêng. (Đồng hydroxide như Kocide/Champion linh hoạt hơn.)</li>
             <li><strong>Vi sinh</strong> (Dipel Bt, Acti No Vate, Trichoderma) với thuốc nấm hóa học, kháng sinh, vôi. Cách ly 5–7 ngày.</li>
             <li><strong>Carbamate kim loại</strong> (mancozeb, zineb, propineb, fosetyl-Al) với kháng sinh (kasugamycin, validamycin…).</li>
             <li><strong>Canxi / magie</strong> với gốc sunfat hoặc lân — kết tủa, nghẹt béc.</li>
-            <li><strong>Cùng nhóm IRAC hoặc FRAC</strong> — không mở phổ, tăng kháng thuốc (Prevathon 5SC / 200SC + Benevia; Mospilan + Jono / Mikhada / Anvado + Thiamax / Actara + Dantotsu; Insuran + Phytocide + Eddy + Cylen; Permethrin + Icon + Sec Saigon + NP-Cyrin).</li>
+            <li><strong>Cùng nhóm IRAC hoặc FRAC</strong> — không mở phổ, tăng kháng thuốc (Prevathon 5SC / 200SC + Benevia; Mospilan + Jono / Mikhada / Anvado + Thiamax / Actara + Dantotsu; Insuran + Phytocide + Eddy + Cylen; Permethrin + Sec Saigon + NP-Cyrin).</li>
           </ul>
         </div>
 
-        <div class="callout warn">
+        <div class="callout warn" data-i18n-html="fourRight">
           <strong>Bốn đúng:</strong> đúng thuốc — đúng liều nhãn — đúng lúc — đúng cách. Nước sạch. Pha xong phun ngay. Sáng sớm hoặc chiều mát. Bảo hộ khi pha và khi phun.
         </div>
-        <p><a href="#/tra">Mở bộ tra pha với thuốc hay dùng →</a></p>
+        <p><a href="#/tra" data-i18n="mixLink">Mở bộ tra pha với thuốc hay dùng →</a></p>
       </section>
 
       <section id="page-products" class="page">
         <div class="filters">
-          <button class="on" data-filter="all">Tất cả</button>
-          <button data-filter="tru-sau">Trừ sâu</button>
-          <button data-filter="tru-benh">Trừ bệnh</button>
-          <button data-filter="bio">Sinh học</button>
+          <button class="on" data-filter="all" data-i18n="filterAll">Tất cả</button>
+          <button data-filter="tru-sau" data-i18n="filterInsect">Trừ sâu</button>
+          <button data-filter="tru-benh" data-i18n="filterDisease">Trừ bệnh</button>
+          <button data-filter="bio" data-i18n="filterBio">Sinh học</button>
         </div>
         <div id="prod-list" class="prod-list"></div>
       </section>
@@ -167,16 +175,16 @@
       </section>
 
       <section id="page-checker" class="page">
-        <h2 style="font-size:1.05rem;margin:0 0 6px">Bộ tra pha</h2>
-        <p class="muted">Chọn cây đang phun, nhập số lít bình pha, rồi chọn thuốc. Thuốc cấm trên cây đó bị làm mờ, không chọn được.</p>
+        <h2 style="font-size:1.05rem;margin:0 0 6px" data-i18n="checkerH2">Bộ tra pha</h2>
+        <p class="muted" data-i18n="checkerIntro">Chọn cây đang phun, nhập số lít bình pha, rồi chọn thuốc. Thuốc cấm trên cây đó bị làm mờ, không chọn được.</p>
         <div class="crop-bar">
-          <label for="crop-select">Cây đang phun</label>
+          <label for="crop-select" data-i18n="cropLabel">Cây đang phun</label>
           <select id="crop-select"></select>
           <p id="crop-ban-hint" class="muted"></p>
         </div>
         <div class="tank-card">
-          <label for="tank-liters">Số lít cần pha</label>
-          <p class="muted" id="tank-hint">Liều nhãn tính theo bình 16 lít. Nhập đúng số lít nước sẽ pha — hệ thống quy ra lượng thuốc phải lấy cho bình đó.</p>
+          <label for="tank-liters" data-i18n="tankLabel">Số lít cần pha</label>
+          <p class="muted" id="tank-hint" data-i18n="tankHint">Liều nhãn tính theo bình 16 lít. Nhập đúng số lít nước sẽ pha — hệ thống quy ra lượng thuốc phải lấy cho bình đó.</p>
           <div class="tank-bar">
             <button type="button" data-l="8">8L</button>
             <button type="button" class="on" data-l="16">16L</button>
@@ -185,7 +193,7 @@
           </div>
           <div class="tank-custom">
             <input id="tank-liters" type="number" min="0.5" max="500" step="0.5" value="16" inputmode="decimal" enterkeyhint="done">
-            <span class="tank-unit">lít</span>
+            <span class="tank-unit" data-i18n="tankUnit">lít</span>
           </div>
           <p id="tank-scale-hint" class="muted"></p>
         </div>
@@ -194,11 +202,11 @@
       </section>
 
       <section id="page-sources" class="page">
-        <button class="back" data-go="#/">← Trang chủ</button>
-        <h2 style="font-size:1.05rem;margin:0 0 8px">Nguồn</h2>
-        <p class="muted">Thông tin tổng hợp để tra nhanh ngoài đồng. Liều và cây trồng đăng ký có thể khác giữa các lô — luôn đọc nhãn.</p>
+        <button class="back" data-go="#/" data-i18n="sourcesBack">← Trang chủ</button>
+        <h2 style="font-size:1.05rem;margin:0 0 8px" data-i18n="sourcesH2">Nguồn</h2>
+        <p class="muted" data-i18n="sourcesIntro">Thông tin tổng hợp để tra nhanh ngoài đồng. Liều và cây trồng đăng ký có thể khác giữa các lô — luôn đọc nhãn.</p>
         <div id="source-list"></div>
-        <p class="note-legal">Trang này không phải văn bản pháp lý hay khuyến cáo thương mại. IRAC/FRAC dùng để tránh chồng nhóm, không thay thế tư vấn bảo vệ thực vật tại địa phương.</p>
+        <p class="note-legal" data-i18n="sourcesLegal">Trang này không phải văn bản pháp lý hay khuyến cáo thương mại. IRAC/FRAC dùng để tránh chồng nhóm, không thay thế tư vấn bảo vệ thực vật tại địa phương.</p>
       </section>
     </main>
   </div>
@@ -206,27 +214,28 @@
   <nav class="bottom-nav" aria-label="Điều hướng">
     <button data-page="home" data-go="#/">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11l8-7 8 7v9H4z"/></svg>
-      Trang chủ
+      <span data-i18n="navHome">Trang chủ</span>
     </button>
     <button data-page="forms" data-go="#/dang">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></svg>
-      Dạng
+      <span data-i18n="navForms">Dạng</span>
     </button>
     <button data-page="checker" data-go="#/tra">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 4h10l-1 6H8L7 4z"/><path d="M9 10v8a3 3 0 006 0v-8"/></svg>
-      Tra pha
+      <span data-i18n="navCheck">Tra pha</span>
     </button>
     <button data-page="products" data-go="#/thuoc">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4h8l2 4H6l2-4z"/><rect x="6" y="8" width="12" height="12" rx="1"/></svg>
-      Thuốc
+      <span data-i18n="navProd">Thuốc</span>
     </button>
     <button data-page="mix" data-go="#/pha">
       <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 4h8M9 4v6L5 18h14l-4-8V4"/><path d="M9 14h6"/></svg>
-      Hướng dẫn
+      <span data-i18n="navGuide">Hướng dẫn</span>
     </button>
   </nav>
 
   <script src="js/data.js"></script>
+  <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

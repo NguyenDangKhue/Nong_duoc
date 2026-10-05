@@ -78,6 +78,44 @@ select {
   padding-top: max(12px, env(safe-area-inset-top));
 }
 
+.top-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.lang-switch {
+  display: flex;
+  flex: 0 0 auto;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 999px;
+  overflow: hidden;
+  margin-top: 2px;
+}
+
+.lang-switch button {
+  border: 0;
+  background: transparent;
+  color: #d5e6da;
+  padding: 6px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+  min-height: 32px;
+}
+
+.lang-switch button.on {
+  background: #fff;
+  color: var(--nav);
+}
+
+body.lang-ja {
+  font-family: "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+  line-height: 1.55;
+}
+
 .topbar h1 {
   margin: 0;
   font-size: 1.05rem;

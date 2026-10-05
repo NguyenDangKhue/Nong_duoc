@@ -313,7 +313,6 @@ window.BVTV = (function () {
         "Sinh học: pH nước nên 4,5–8. Nước kiềm làm giảm hiệu lực.",
         "Có thể phối nhiều thuốc hóa học nếu thử cốc đạt; phun trong ngày.",
         "Đồng: một số tài liệu Dipel cho phép phối nhưng phải phun ngay. Booc-đô, vôi lưu huỳnh: không phối.",
-        "Một số nhãn Dipel cũ cấm phối chlorothalonil (Daconil) — ưu tiên không pha chung.",
       ],
       tags: ["sinh học", "Bt", "sâu ăn lá"],
     },
@@ -550,7 +549,7 @@ window.BVTV = (function () {
       phi: "14 ngày.",
       mixNotes: [
         "Lắc chai. Cho bước SC.",
-        "Nên phối hoặc luân phiên với thuốc đa vị trí (Daconil, đồng) để chống kháng strobilurin.",
+        "Nên phối hoặc luân phiên với thuốc đa vị trí (đồng) để chống kháng strobilurin.",
         "Không thay thế thuốc trị khi bệnh đã nặng trên một số đối tượng — chủ yếu phòng và chớm bệnh.",
       ],
       tags: ["strobilurin", "nội hấp"],
@@ -599,7 +598,7 @@ window.BVTV = (function () {
       },
       phi: "14 ngày.",
       mixNotes: [
-        "Nên phối với thuốc tiếp xúc (Daconil, mancozeb, đồng dạng phù hợp) vì metalaxyl đơn độc dễ mất hiệu lực do kháng.",
+        "Nên phối với thuốc tiếp xúc (mancozeb, đồng dạng phù hợp) vì metalaxyl đơn độc dễ mất hiệu lực do kháng.",
         "Hòa WP trước. Một số tài liệu cho phép phối COC — vẫn thử cốc; COC 85 khuyến cáo phun riêng.",
       ],
       tags: ["phenylamide", "Phytophthora"],
@@ -697,7 +696,7 @@ window.BVTV = (function () {
       phi: "14 ngày.",
       mixNotes: [
         "WG: rắc vào nước đang khuấy, đợi nở hết.",
-        "Khác nhóm với Amistar (11), Daconil (M05), Ranman (21) — phù hợp luân phiên.",
+        "Khác nhóm với Amistar (11), Ranman (21) — phù hợp luân phiên.",
       ],
       tags: ["SDHI", "boscalid"],
     },
@@ -725,31 +724,6 @@ window.BVTV = (function () {
         "Kiềm: có thể làm giảm Bt (Dipel) nếu không phun ngay; Acti No Vate (vi sinh) không phối.",
       ],
       tags: ["đồng", "tiếp xúc", "phun riêng"],
-    },
-    {
-      id: "daconil",
-      name: "Daconil 500SC",
-      form: "SC",
-      kind: "tru-benh",
-      bio: false,
-      ai: "Chlorothalonil 500 g/l",
-      group: "FRAC M05",
-      company: "Nhiều thị trường; phổ rộng đa vị trí",
-      pack: "450 ml",
-      targets: "Sương mai, đốm lá, thán thư, rỉ sắt — tiếp xúc/bề mặt, bám mưa, ít kháng.",
-      crops: "Cà chua, khoai tây, dưa, lạc, xoài, lúa, hoa hồng theo nhãn.",
-      dose: {
-        per16: "36 ml",
-        per1000: "100 ml / 45 lít nước",
-        note: "Bảng pha vườn: 100 ml / 45 lít / 1000 m² (pha 1:375, khoảng 1:320–1:470). Chai 450 ml.",
-      },
-      phi: "14 ngày.",
-      mixNotes: [
-        "Lắc chai. Bước SC. Thuốc đa vị trí — nên dùng trong chương trình chống kháng strobilurin/SDHI.",
-        "Một số nhãn Dipel cấm phối chlorothalonil — không pha Dipel + Daconil.",
-        "Không phải thuốc trị Phytophthora lưu dẫn.",
-      ],
-      tags: ["đa vị trí", "tiếp xúc"],
     },
     {
       id: "neem",
@@ -850,28 +824,6 @@ window.BVTV = (function () {
       tags: ["neonicotinoid", "actara", "thiamethoxam", "rầy"],
     },
     {
-      id: "enspray",
-      name: "SK ENSPRAY 99% EC",
-      form: "EC",
-      kind: "tru-sau",
-      bio: false,
-      ai: "Petroleum spray oil (dầu khoáng) 99%",
-      group: "Horticultural oil",
-      company: "SK",
-      targets: "Rệp, nhện, rầy, trứng côn trùng — bọc và ngạt. Cũng dùng như chất trải.",
-      crops: "Nhiều cây ăn trái/rau theo nhãn. Cấm một số hành, cải, bí, đậu — xem bộ Tra pha.",
-      dose: {
-        per16: "Theo nhãn",
-        note: "Dầu khoáng dễ cháy lá khi nắng, liều cao, hoặc phối EC khác. Luôn theo nhãn lô hàng.",
-      },
-      phi: "Theo nhãn.",
-      mixNotes: [
-        "EC dầu: cho gần cuối. Không tăng liều khi nắng gắt.",
-        "Hạn chế pha thêm EC hóa học — dễ cháy lá.",
-      ],
-      tags: ["dầu khoáng", "enspray", "petroleum"],
-    },
-    {
       id: "kanaka",
       name: "Kanaka 405WP",
       form: "WP",
@@ -953,28 +905,6 @@ window.BVTV = (function () {
       tags: ["iprodione", "thối nhũn"],
     },
     {
-      id: "icon",
-      name: "Icon 2.5EC",
-      form: "EC",
-      kind: "tru-sau",
-      bio: false,
-      ai: "Lambda-cyhalothrin 25 g/l",
-      group: "IRAC 3A",
-      company: "Syngenta / phổ biến VN",
-      targets: "Sâu ăn lá, rầy, muỗi — cúc tổng hợp tiếp xúc, vị độc.",
-      crops: "Theo nhãn. Cấm khoai lang Caiapo, bắp ngọt — xem bộ Tra pha.",
-      dose: {
-        per16: "Theo nhãn",
-        note: "Độc ong, cá. Không phun khi hoa nở rộ.",
-      },
-      phi: "Theo nhãn.",
-      mixNotes: [
-        "EC: cho gần cuối. Hạn chế pha 2 EC.",
-        "Không pha Map-Permethrin, Sec Saigon hoặc NP-Cyrin Super (cùng IRAC 3A).",
-      ],
-      tags: ["cúc tổng hợp", "cyhalothrin"],
-    },
-    {
       id: "rimon",
       name: "Rimon 10EC",
       form: "EC",
@@ -1011,7 +941,7 @@ window.BVTV = (function () {
       phi: "Theo nhãn.",
       mixNotes: [
         "EC: cho gần cuối. Hạn chế pha 2 EC.",
-        "Không pha NP-Cyrin Super (trùng cypermethrin) hoặc Map-Permethrin / Icon (IRAC 3A).",
+        "Không pha NP-Cyrin Super (trùng cypermethrin) hoặc Map-Permethrin (IRAC 3A).",
       ],
       tags: ["cúc tổng hợp", "cypermethrin", "cyrin", "sec saigon"],
     },
@@ -1033,7 +963,7 @@ window.BVTV = (function () {
       phi: "Theo nhãn.",
       mixNotes: [
         "EC: cho gần cuối. Hạn chế pha 2 EC.",
-        "Không pha Sec Saigon (trùng cypermethrin) hoặc Map-Permethrin / Icon (IRAC 3A).",
+        "Không pha Sec Saigon (trùng cypermethrin) hoặc Map-Permethrin (IRAC 3A).",
         "Độc ong, cá. Không phun khi hoa nở rộ.",
       ],
       tags: ["cúc tổng hợp", "cypermethrin", "cyrin", "np-cyrin"],
@@ -1097,17 +1027,14 @@ window.BVTV = (function () {
     eddy: ["dimethomorph", "cuprous_oxide"],
     kimono: ["boscalid"],
     coc: ["copper_oxychloride"],
-    daconil: ["chlorothalonil"],
     neem: ["azadirachtin"],
     acti: ["streptomyces"],
     thiamax: ["thiamethoxam"],
     actara: ["thiamethoxam"],
-    enspray: ["petroleum_oil"],
     kanaka: ["myclobutanil"],
     cylen: ["dimethomorph"],
     dantotsu: ["clothianidin"],
     viroval: ["iprodione"],
-    icon: ["lambda_cyhalothrin"],
     rimon: ["novaluron"],
     secsaigon: ["cypermethrin"],
     cyrin: ["cypermethrin"],
@@ -1134,7 +1061,6 @@ window.BVTV = (function () {
     eddy: { ratio: 333, upper: 333, lower: 500, unit: "g" },
     kimono: { ratio: 2000, upper: 2000, lower: 2000, unit: "g" },
     coc: { ratio: 400, upper: 200, lower: 400, unit: "g" },
-    daconil: { ratio: 375, upper: 320, lower: 470, unit: "ml" },
     neem: { ratio: 400, upper: 320, lower: 533, unit: "ml" },
     acti: { ratio: 1600, upper: 1600, lower: 1600, unit: "g" },
   };
@@ -1150,7 +1076,7 @@ window.BVTV = (function () {
   };
 
   const AI_LABEL = {
-    petroleum_oil: "Dầu khoáng (SK ENSPRAY)",
+    petroleum_oil: "Dầu khoáng",
     myclobutanil: "Myclobutanil (Kanaka)",
     metalaxyl: "Metalaxyl (Metaxyl)",
     dimethomorph: "Dimethomorph (Cylen, Insuran, Phytocide, Eddy)",
@@ -1161,7 +1087,7 @@ window.BVTV = (function () {
     iprodione: "Iprodione (Viroval)",
     permethrin: "Permethrin (Map-Permethrin)",
     cyazofamid: "Cyazofamid (Ranman)",
-    lambda_cyhalothrin: "Cyhalothrin (Icon)",
+    lambda_cyhalothrin: "Cyhalothrin",
     azoxystrobin: "Azoxystrobin (Amistar)",
     acetamiprid: "Acetamiprid (Mospilan)",
     chlorfenapyr: "Chlorfenapyr (Secure)",
@@ -1174,10 +1100,10 @@ window.BVTV = (function () {
   };
 
   const CROP_GROUPS = [
-    { id: "hanh", name: "Hành, hẹ, gia vị" },
-    { id: "la", name: "Rau ăn lá" },
-    { id: "cu", name: "Rau củ" },
-    { id: "qua", name: "Quả, đậu, khác" },
+    { id: "hanh", name: "Hành, hẹ, gia vị", ja: "ねぎ・にら・香味野菜" },
+    { id: "la", name: "Rau ăn lá", ja: "葉菜類" },
+    { id: "cu", name: "Rau củ", ja: "根菜類" },
+    { id: "qua", name: "Quả, đậu, khác", ja: "果菜・豆類・その他" },
   ];
 
   /* Cấm theo ô 使用不可 trên bảng chuẩn (4 sheet). Không suy diễn ô trống / 基準値なし. */
@@ -1226,7 +1152,7 @@ window.BVTV = (function () {
       name: "Hành hương",
       ja: "わけぎ",
       group: "hanh",
-      bannedAis: ["petroleum_oil", "chlorantraniliprole", "cyantraniliprole"],
+      bannedAis: ["dimethomorph", "permethrin", "chlorfenapyr", "novaluron"],
     },
     {
       id: "hanh",
@@ -1339,7 +1265,7 @@ window.BVTV = (function () {
       name: "Cà rốt",
       ja: "ニンジン",
       group: "cu",
-      bannedAis: ["petroleum_oil", "myclobutanil", "dimethomorph", "chlorantraniliprole"],
+      bannedAis: ["petroleum_oil", "myclobutanil", "dimethomorph", "chlorantraniliprole", "novaluron"],
     },
     {
       id: "cu-cai",
@@ -1361,6 +1287,7 @@ window.BVTV = (function () {
         "iprodione",
         "fosthiazate",
         "cyantraniliprole",
+        "novaluron",
       ],
     },
     {
@@ -1383,7 +1310,6 @@ window.BVTV = (function () {
         "iprodione",
         "cyazofamid",
         "novaluron",
-        "fosthiazate",
       ],
     },
     {
@@ -1398,7 +1324,7 @@ window.BVTV = (function () {
       name: "Bắp ngọt",
       ja: "スイートコーン",
       group: "qua",
-      bannedAis: ["diazinon", "fosthiazate"],
+      bannedAis: ["diazinon", "fosthiazate", "myclobutanil", "dimethomorph"],
     },
     {
       id: "ca-tim",
@@ -1436,12 +1362,6 @@ window.BVTV = (function () {
       b: "kind:tru-benh",
       level: "block",
       reason: "Streptomyces (Acti No Vate) bị diệt bởi thuốc trừ nấm/đồng/kháng sinh hóa học. Phun cách ly 5–7 ngày.",
-    },
-    {
-      a: "dipel",
-      b: "daconil",
-      level: "block",
-      reason: "Một số nhãn Dipel cấm phối chlorothalonil (Daconil). Không pha chung.",
     },
     {
       a: "dipel",
@@ -1483,10 +1403,10 @@ window.BVTV = (function () {
       reason: "Trùng dimethomorph. Eddy đã chứa 12% dimethomorph — không cộng thêm Insuran/Phytocide/Cylen.",
     },
     {
-      ids: ["permethrin", "icon", "secsaigon", "cyrin"],
+      ids: ["permethrin", "secsaigon", "cyrin"],
       group: "IRAC 3A (cúc tổng hợp)",
       level: "block",
-      reason: "Map-Permethrin, Icon, Sec Saigon và NP-Cyrin Super cùng nhóm 3A. Chọn một loại; độc ong.",
+      reason: "Map-Permethrin, Sec Saigon và NP-Cyrin Super cùng nhóm 3A. Chọn một loại; độc ong.",
     },
   ];
 
